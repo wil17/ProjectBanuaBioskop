@@ -19,9 +19,9 @@ class FilmsController extends Controller
         if(!empty($search)){
             $dataFilms = Films::where('films.idfilms','like','%'.$search.'%')
                 ->orWhere('films.namafilm', 'like', '%' . $search . '%')
-                ->paginate(8)->onEachSide(2)->fragment('flm');
+                ->paginate(5)->onEachSide(2)->fragment('flm');
         }else{
-            $dataFilms = Films::paginate(8)->onEachSide(2)->fragment('flm');
+            $dataFilms = Films::paginate(5)->onEachSide(2)->fragment('flm');
         }
         return view('films.data')->with([
             'films' => $dataFilms,

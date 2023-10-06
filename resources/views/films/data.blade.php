@@ -19,7 +19,7 @@
         @endif
         <form action="" method="GET">
             <div class="row mb-3">
-              <label for="search" class="col-sm-2 col-form-label">Cari Data</label>
+              <label for="search" class="col-sm-3 col-form-label">Cari Data</label>
               <div class="col-sm-10">
                   <input type="text" class="form-control form-control-sm" value="" placeholder="Ketikkan data yang ingin dicari..." name="search" autofocus value="{{ $search }}">
               </div>

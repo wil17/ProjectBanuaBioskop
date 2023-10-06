@@ -11,7 +11,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $data['films'] = DB::table('films')->paginate(4);
+        $data['films'] = DB::table('films')->paginate(8);
         return view('films/dashboard',$data);
     }
 

@@ -18,21 +18,18 @@
                 @can('admin')
                 <li class="nav-item">
                   <a class="nav-link {{ request()->segment('1') == 'films' }} ? 'active' : '' }}" aria-current="page" href="films">
-                      <i class="fas fa-user"></i>Film
-                  </a>
+                      <i class="fas fa-film"></i>Film
+                  </a></li>
                   <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'data_pengguna' }} ? 'active' : '' }}" aria-current="page" href="data_pengguna"><i class="fas fa-school"></i>Data Pengguna
+                    <a class="nav-link {{ request()->segment('1') == 'data_pengguna' }} ? 'active' : '' }}" aria-current="page" href="data_pengguna"><i class="fas fa-user"></i>Data Pengguna
                     </a>
                   @endcan
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link {{ request()->segment('1') == 'login' }} ? 'active' : '' }}" aria-current="page" href="{{ route('login.logout') }}">
+                      <i class="fas fa-power-off"></i>Logout
+                  </a>
             </ul>
-            <div class="text-end d-flex align-items-center">
-              <div class="user me-3"> 
-                  Halo, {{ Auth::user()->name }}
-              </div>
-              <div class="logout">
-                  <a href="{{ route('login.logout') }}" class="btn btn-danger">Logout</a>
-              </div>
           </div>
           </div>
       </nav>
